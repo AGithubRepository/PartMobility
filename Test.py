@@ -26,9 +26,9 @@ parser.add_argument('--decay_step', type=int, default=200000, help='Decay step f
 parser.add_argument('--decay_rate', type=float, default=0.7, help='Decay rate for lr decay [default: 0.7]')
 parser.add_argument('--model', default='model', help='Model name [default: model]')
 parser.add_argument('--log_dir', default='log_test', help='Log dir [default: log]')
-parser.add_argument('--train_data_dir', default='train_data', help='Train data dir [default: data]')
+parser.add_argument('--train_data_dir', default='train', help='Train data dir [default: data]')
 parser.add_argument('--val_data_dir', default='val_data', help='Val data dir [default: data]')
-parser.add_argument('--test_data_dir', default='test_data', help='Test dir [default: data]')
+parser.add_argument('--test_data_dir', default='test', help='Test dir [default: data]')
 parser.add_argument('--npoint', type=int, default=2048, help='Point number of pointcloud [default: 1024]')
 FLAGS = parser.parse_args()
 
@@ -72,11 +72,14 @@ TRAIN_DATA_DIR = FLAGS.train_data_dir
 VAL_DATA_DIR = FLAGS.val_data_dir
 TEST_DATA_DIR = FLAGS.test_data_dir
 
+
 TEST_DATA = Dataset(TEST_DATA_DIR)
 num_data = len(TEST_DATA)
 print(num_data)
-
+'''
 idxs = np.arange(num_data).astype(np.int)
+np.random.shuffle(idxs)
+
 # random.shuffle(idxs)
 f = open('idx.txt', 'w')
 num = min(num_data, 200)
@@ -84,6 +87,7 @@ for i in range(num):
     f.write(str(idxs[i]) + '\n')
 f.close()
 print('------->Down!')
+'''
 
 
 
@@ -154,12 +158,11 @@ def train_and_eval():
             #best_acc = -1
             for i in range(MAX_EPOCH):
                 start_time = time.time();
-                num_data = len(TEST_DATA)
-                print(num_data)
-                print("TRAIN EPOCH %d:" %(i))
-                idxs = range(num_data)
-                idxs = np.arange(num_data).astype(np.int)
-                random.shuffle(idxs)
+                f = open('idx.txt', 'r')
+                idxs = [int(idx) for idx in f]
+                f.close()
+                idxs = np.array(idxs)
+                print(idxs)
                 for j in range(int(num_data/BATCH_SIZE)):
                     start_idx = BATCH_SIZE*j
                     end_idx = BATCH_SIZE*j+BATCH_SIZE
