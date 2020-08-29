@@ -23,9 +23,9 @@ parser.add_argument('--decay_step', type=int, default=5000, help='Decay step for
 parser.add_argument('--decay_rate', type=float, default=0.5, help='Decay rate for lr decay [default: 0.7]')
 parser.add_argument('--model', default='model', help='Model name [default: model]')
 parser.add_argument('--log_dir', default='log', help='Log dir [default: log]')
-parser.add_argument('--train_data_dir', default='data/train_data', help='Train data dir [default: data]')
+parser.add_argument('--train_data_dir', default='data/train', help='Train data dir [default: data]')
 parser.add_argument('--val_data_dir', default='data/val_data', help='Val data dir [default: data]')
-parser.add_argument('--test_data_dir', default='data/test_data', help='Test dir [default: data]')
+parser.add_argument('--test_data_dir', default='data/test', help='Test dir [default: data]')
 parser.add_argument('--npoint', type=int, default=2048, help='Point number of pointcloud [default: 1024]')
 FLAGS = parser.parse_args()
 
