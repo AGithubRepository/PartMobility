@@ -12,7 +12,9 @@ Compile command：
 
 ## 2. Dataset
 
-Our training and testing data are point cloud squence sampled from [Motion Dataset](http://motiondataset.zbuaa.com/) and [PartNet](https://cs.stanford.edu/~kaichun/partnet/).  You  can download the processed data from [here](https://drive.google.com/uc?export=download&id=1kfHhzf__gESS6k_yC6ntl5effv5MnhbV). For more categories of objects you can download the [enhance data](https://drive.google.com/uc?export=download&id=1TT7qjEOR80pMlIwW6R5n5ZPcxPLKW9s5).
+We leverage two annotated datasets including [Motion Dataset](http://motiondataset.zbuaa.com/) and [PartNet](https://cs.stanford.edu/~kaichun/partnet/) to build synthetic dataset (s-data). We label the motion range for some categories in Motion dataset and PartNet. Finally, we choose 31 categories and simulate motion sequence for each object randomly. 
+
+You  can download the processed 19-cate data from [here](https://drive.google.com/uc?export=download&id=1kfHhzf__gESS6k_yC6ntl5effv5MnhbV). For more categories of objects you can download the [enhance data](https://drive.google.com/uc?export=download&id=1TT7qjEOR80pMlIwW6R5n5ZPcxPLKW9s5).
 
 ## 3. Usage
 
