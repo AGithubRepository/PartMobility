@@ -10,7 +10,11 @@ Compile command：
 
     sh tf_xxx_compile.sh
 
-## 2. Usage
+## 2. Dataset
+
+Our training and testing data are point cloud squence sampled from [Motion Dataset](http://motiondataset.zbuaa.com/).  You  can download the processed data from [here](https://drive.google.com/file/d/1kfHhzf__gESS6k_yC6ntl5effv5MnhbV/view?usp=sharing). For more categories of objects you can download the [enhance data](https://drive.google.com/file/d/1TT7qjEOR80pMlIwW6R5n5ZPcxPLKW9s5/view?usp=sharing).
+
+## 3. Usage
 
 To train the PartMobility model and predict the motion of point cloud sequence：
 
