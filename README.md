@@ -12,7 +12,7 @@ Compile command：
 
 ## 2. Dataset
 
-Our training and testing data are point cloud squence sampled from [Motion Dataset](http://motiondataset.zbuaa.com/).  You  can download the processed data from [here](https://drive.google.com/file/d/1kfHhzf__gESS6k_yC6ntl5effv5MnhbV/view?usp=sharing). For more categories of objects you can download the [enhance data](https://drive.google.com/file/d/1TT7qjEOR80pMlIwW6R5n5ZPcxPLKW9s5/view?usp=sharing).
+Our training and testing data are point cloud squence sampled from [Motion Dataset](http://motiondataset.zbuaa.com/).  You  can download the processed data from [here](https://drive.google.com/uc?export=download&id=1kfHhzf__gESS6k_yC6ntl5effv5MnhbV). For more categories of objects you can download the [enhance data](https://drive.google.com/uc?export=download&id=1TT7qjEOR80pMlIwW6R5n5ZPcxPLKW9s5).
 
 ## 3. Usage
 
